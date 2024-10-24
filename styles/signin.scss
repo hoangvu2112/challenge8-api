@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eef1f5;
+}
+
+.login-container {
+  display: flex;
+  width: 100%;
+  max-width: 762px;
+  border-radius: 6px;
+  /* margin: 5em auto; */
+  border-radius: 8px;
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+  overflow: hidden;
+
+  &__left-panel {
+    width: 40%;
+    background-color: #6a5acd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem !important;
+    color: white;
+
+    & .login-container__branding {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & .login-container__logo {
+      width: 132px;
+
+      margin-bottom: 24px;
+    }
+
+    & .signin__title {
+      margin-top: 20px;
+      text-align: center;
+
+      & .login-container__heading {
+        font-size: 17.5px;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      & .login-container__info {
+        font-size: 13px;
+        color: #d1d1e9;
+        margin-bottom: 48px;
+      }
+    }
+  }
+
+  &__right-panel {
+    width: 60%;
+    max-width: 366px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    & .right__tile {
+      margin-bottom: 24px;
+
+      & .login-container__heading {
+        font-size: 17.5px;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      & .login-container__info {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.login-form {
+  &__group {
+    margin-bottom: 15px;
+  }
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #5541cc;
+    }
+  }
+
+  &__links {
+    margin-top: 48px;
+  }
+
+  &__link {
+    display: block;
+    color: #6a5acd;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 5px;
+    .titles {
+      color: #000000;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
