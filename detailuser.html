@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail User</title>
+    <link rel="stylesheet" href="/styles/detailuser.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/userlist.js"></script>
+  </head>
+  <body>
+    <div class="detail-user">
+      <!-- Sidebar -->
+      <div class="detail-user__sidebar">
+        <h1 class="detail-user__brand">Brand.</h1>
+        <div class="detail-user__nav">
+          <div class="detail-user__nav-item-wrapper">
+            <img
+              src="/imges/Vector.svg"
+              alt="Users Icon"
+              class="detail-user__nav-icon"
+            />
+            <p
+              class="detail-user__nav-item detail-user__nav-item--active"
+              onclick="redirectToUserList()"
+            >
+              Users
+            </p>
+          </div>
+
+          <div class="detail-user__nav-item-wrapper">
+            <img
+              src="/imges/Vector2.svg"
+              alt="Projects Icon"
+              class="detail-user__nav-icon"
+            />
+            <a href="/projectlist.html" class="detail-user__nav-item"
+              >Projects</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="user-form__main-content">
+        <div class="user-form__top-header">
+          <div class="user-form__user-info">
+            <p class="user-form__user-name">Derek Alvarado</p>
+            <span class="user-form__user-icon">
+              <img
+                src="/imges/log-out-off-out-svgrepo-com 1.svg"
+                onclick="logout()"
+              />
+            </span>
+          </div>
+        </div>
+
+        <div class="detail-user__header">
+          <h1 class="detail-user__title">
+            <a href="/userlist.html" class="main-content-back">&larr; </a>
+            Detail User
+          </h1>
+        </div>
+
+        <!-- Form Detail User -->
+        <div class="detail-user__container">
+          <form class="detail-user__form">
+            <div class="detail-user__field">
+              <label class="detail-user__label" for="username">User Name</label>
+              <input
+                class="detail-user__input"
+                type="text"
+                id="username"
+                readonly
+              />
+            </div>
+
+            <div class="detail-user__field">
+              <label class="detail-user__label" for="email">Email</label>
+              <input
+                class="detail-user__input"
+                type="email"
+                id="email"
+                readonly
+              />
+            </div>
+
+            <div class="detail-user__buttons">
+              <button class="detail-user__button--cancel" type="button">
+                CANCEL
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

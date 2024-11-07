@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+}
+
+.user-form {
+  display: flex;
+  height: 100vh;
+}
+.user-form .user-form__sidebar {
+  width: 20%;
+  background-color: #2f3a4f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.user-form .user-form__sidebar .user-form__brand {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.user-form .user-form__sidebar .user-form__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-form .user-form__sidebar .user-form__nav .user-form__nav-item-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa icon và văn bản */
+  margin-bottom: 8px;
+}
+.user-form .user-form__sidebar .user-form__nav .user-form__nav-item-wrapper:hover {
+  background-color: #3f4c63;
+  width: 100%;
+}
+.user-form .user-form__sidebar .user-form__nav .user-form__nav-item {
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  transition: background 0.3s;
+}
+.user-form .user-form__sidebar .user-form__nav .user-form__nav-icon {
+  width: 20px; /* Kích thước icon */
+  height: 20px; /* Kích thước icon */
+}
+.user-form .user-form__main-content {
+  flex: 1;
+  padding: 20px;
+  width: 80%;
+}
+.user-form .user-form__main-content .user-form__top-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.user-form .user-form__main-content .user-form__user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  padding: 8px 27.74px;
+  border-radius: 8px;
+  border: 1px solid var(--Neutral-200, #e9ecef);
+}
+.user-form .user-form__main-content .user-form__user-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+}
+.user-form .user-form__main-content .user-form__user-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.user-form .user-form__main-content .user-form__user-icon img {
+  width: 100%;
+  height: 100%;
+}
+.user-form .user-form__main-content .user-form__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.user-form .user-form__main-content .user-form__title {
+  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+.user-form .user-form__main-content .user-form__title .main-content-back {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.user-form .user-form__main-content .user-form__container {
+  background-color: #fff;
+  padding: 16px 16px 604px 16px;
+  height: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.user-form .user-form__main-content .user-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.user-form .user-form__main-content .user-form__field {
+  display: flex;
+  flex-direction: column;
+}
+.user-form .user-form__main-content .user-form__label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+}
+.user-form .user-form__main-content .user-form__label span {
+  color: red;
+}
+.user-form .user-form__main-content .user-form__input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.user-form .user-form__main-content .user-form__buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+.user-form .user-form__main-content .user-form__button--create {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.user-form .user-form__main-content .user-form__button--create:hover {
+  opacity: 0.9;
+}
+.user-form .user-form__main-content .user-form__button--cancel {
+  padding: 10px 20px;
+  background-color: #f4f4f9;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.user-form .user-form__main-content .user-form__button--cancel:hover {
+  opacity: 0.9;
+}/*# sourceMappingURL=adduser.css.map */

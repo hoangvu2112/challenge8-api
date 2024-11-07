@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New User</title>
+    <link rel="stylesheet" href="/styles/adduser.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/adduser.js"></script>
+  </head>
+  <body>
+    <div class="user-form">
+      <div class="user-form__sidebar">
+        <h1 class="user-form__brand">Brand.</h1>
+        <div class="user-form__nav">
+          <div class="user-form__nav-item-wrapper">
+            <img
+              src="/imges/Vector.svg"
+              alt="Users Icon"
+              class="user-form__nav-icon"
+            />
+            <p
+              class="user-form__nav-item user-form__nav-item--active"
+              onclick="redirectToUserList()"
+            >
+              Users
+            </p>
+          </div>
+
+          <div class="user-form__nav-item-wrapper">
+            <img
+              src="/imges/Vector2.svg"
+              alt="Projects Icon"
+              class="user-form__nav-icon"
+            />
+            <a href="/projectlist.html" class="user-form__nav-item">
+              Projects
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="user-form__main-content">
+        <div class="user-form__top-header">
+          <div class="user-form__user-info">
+            <p class="user-form__user-name">Derek Alvarado</p>
+            <span class="user-form__user-icon">
+              <img
+                src="/imges/log-out-off-out-svgrepo-com 1.svg"
+                onclick="logout()"
+              />
+            </span>
+          </div>
+        </div>
+        <div class="user-form__header">
+          <h1 class="user-form__title">
+            <a href="/userlist.html" class="main-content-back">&larr; </a> New
+            User
+          </h1>
+        </div>
+
+        <div class="user-form__container">
+          <form id="signup-form" class="user-form__form">
+            <div class="user-form__field">
+              <label class="user-form__label" for="username"
+                >User Name<span>*</span></label
+              >
+              <input
+                class="user-form__input"
+                type="text"
+                id="username"
+                value=""
+                required
+              />
+            </div>
+
+            <div class="user-form__field">
+              <label class="user-form__label" for="password"
+                >Password<span>*</span></label
+              >
+              <input
+                class="user-form__input"
+                type="password"
+                id="password"
+                value=""
+                required
+              />
+            </div>
+
+            <div class="user-form__field">
+              <label class="user-form__label" for="email"
+                >Email<span>*</span></label
+              >
+              <input
+                class="user-form__input"
+                type="email"
+                id="email"
+                required
+              />
+            </div>
+
+            <div class="user-form__buttons">
+              <button class="user-form__button--create" type="submit">
+                Create
+              </button>
+              <button class="user-form__button--cancel" type="button">
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
