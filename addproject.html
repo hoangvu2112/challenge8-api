@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Project</title>
+    <link rel="stylesheet" href="/styles/addproject.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/project.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1 class="sidebar__brand">Brand.</h1>
+      <nav class="sidebar__nav">
+        <div class="sidebar__nav-item">
+          <img
+            src="/imges/Vector.svg"
+            alt="Users Icon"
+            class="sidebar__nav-icon"
+          />
+          <a href="/userlist.html" class="sidebar__nav-label">Users</a>
+        </div>
+        <div class="sidebar__nav-item sidebar__nav-item--active">
+          <img
+            src="/imges/Vector2.svg"
+            alt="Projects Icon"
+            class="sidebar__nav-icon"
+          />
+          <p class="sidebar__nav-label">Projects</p>
+        </div>
+      </nav>
+    </div>
+
+    <div class="main-content">
+      <header class="main-content__header">
+        <div class="user-info">
+          <p class="user-info__name">Derek Alvarado</p>
+          <img
+            src="/imges/log-out-off-out-svgrepo-com 1.svg"
+            alt="Logout"
+            class="user-info__logout-icon"
+          />
+        </div>
+      </header>
+
+      <div class="main-content__body">
+        <h1 class="main-content__title">
+          <a href="/projectlist.html" class="main-content-back">&larr; </a> New
+        </h1>
+
+        <form class="project-form">
+          <div class="project-form__group">
+            <label class="project-form__label" for="project-name"
+              >Name<span>*</span></label
+            >
+            <input
+              class="project-form__input"
+              type="text"
+              id="project-name"
+              required
+            />
+          </div>
+
+          <div class="project-form__group">
+            <label class="project-form__label" for="project-description"
+              >Description<span>*</span></label
+            >
+            <input
+              class="project-form__input"
+              type="text"
+              id="project-description"
+              required
+            />
+          </div>
+
+          <div class="project-form__date-group">
+            <div class="project-form__date-field">
+              <label class="project-form__label" for="start-date"
+                >Start Date<span>*</span></label
+              >
+              <input
+                class="project-form__input"
+                type="date"
+                id="start-date"
+                required
+              />
+            </div>
+            <div class="project-form__date-field">
+              <label class="project-form__label" for="end-date"
+                >End Date<span>*</span></label
+              >
+              <input
+                class="project-form__input"
+                type="date"
+                id="end-date"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="project-form__actions">
+            <button
+              class="project-form__button project-form__button--create"
+              type="submit"
+            >
+              Create
+            </button>
+            <button
+              class="project-form__button project-form__button--cancel"
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

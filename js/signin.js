@@ -38,21 +38,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Kiểm tra phản hồi từ server
       const result = await response.json();
+      console.log(result);
       console.log("Response status:", response.status);
       console.log("Response data:", result);
 
-      if (response.status === 200) {
-        // Giả sử phản hồi chứa { id: '123', token: 'your_jwt_token' }
-        const userId = result.id;
+      if (response.ok) {
         const token = result.token;
+        console.log(token);
 
-        // Lưu ID và token vào Local Storage
-        localStorage.setItem("userId", userId);
         localStorage.setItem("authToken", token);
 
         alert("Đăng nhập thành công!");
         // Chuyển hướng đến trang dashboard hoặc trang khác sau khi đăng nhập thành công
-        window.location.href = "/dashboard.html"; // Đổi URL này thành trang đích bạn muốn
+        window.location.href = "/userlist.html"; // Đổi URL này thành trang đích bạn muốn
       } else {
         alert(result.message || "Sai email hoặc mật khẩu!");
       }

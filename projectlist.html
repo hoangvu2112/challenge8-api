@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project List</title>
+    <link rel="stylesheet" href="/styles/projectlist.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/project.js"></script>
+  </head>
+  <body>
+    <div class="project-list">
+      <aside class="project-list-sidebar">
+        <h1 class="project-list-brand">Brand.</h1>
+        <nav class="project-list-nav">
+          <div class="project-list-nav-item-wrapper">
+            <img
+              src="/imges/Vector.svg"
+              alt="Users Icon"
+              class="project-list-nav-icon"
+            />
+            <p class="project-list-nav-item">Users</p>
+          </div>
+          <div
+            class="project-list-nav-item-wrapper project-list-nav-item-wrapper-active"
+          >
+            <img
+              src="/imges/Vector2.svg"
+              alt="Projects Icon"
+              class="project-list-nav-icon"
+            />
+            <p class="project-list-nav-item">Projects</p>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="project-list-main-content">
+        <header class="project-list-header">
+          <div class="project-list-user-info">
+            <p class="project-list-user-name">Derek Alvarado</p>
+            <span class="project-list-logout-icon">
+              <img
+                src="/imges/log-out-off-out-svgrepo-com 1.svg"
+                alt="Log Out"
+                onclick="logout()"
+              />
+            </span>
+          </div>
+        </header>
+
+        <section class="project-list-content">
+          <div class="project-list-title-bar">
+            <h1 class="project-list-title">Project' List</h1>
+            <button
+              class="project-list-new-project-button"
+              onclick="redirectToAddProject()"
+            >
+              + New Project
+            </button>
+          </div>
+
+          <div class="project-list-search-bar">
+            <input
+              type="text"
+              class="project-list-search-input"
+              placeholder="Search..."
+            />
+          </div>
+
+          <div class="project-list-table">
+            <div class="project-list-table-header">
+              <p class="project-list-table-header-cell">#</p>
+              <p class="project-list-table-header-cell">Name</p>
+              <p class="project-list-table-header-cell">Status</p>
+              <p class="project-list-table-header-cell">Start Date</p>
+              <p class="project-list-table-header-cell">End Date</p>
+              <p class="project-list-table-header-cell">Actions</p>
+            </div>
+
+            <div class="project-list-table-body">
+              <div class="project-list-table-row">
+                <div class="project-list-table-cell">1</div>
+                <div class="project-list-table-cell">Alyvia Kelley</div>
+                <div class="project-list-table-cell project-list-status">
+                  <span
+                    class="project-list-status-indicator project-list-status-indicator-new"
+                  ></span>
+                  New
+                </div>
+                <div class="project-list-table-cell">06/18/1978</div>
+                <div class="project-list-table-cell">06/18/1978</div>
+                <div class="project-list-table-cell project-list-actions">
+                  <button class="project-list-action-button">↗</button>
+                  <button class="project-list-action-button">✎</button>
+                  <button
+                    class="project-list-action-button"
+                    data-project-id="31231"
+                  >
+                    🗑
+                  </button>
+                </div>
+              </div>
+              <!-- Repeat table rows as needed -->
+            </div>
+          </div>
+
+          <div class="project-list-pagination">
+            <button class="project-list-pagination-button">&laquo;</button>
+            <button class="project-list-pagination-button">1</button>
+            <button class="project-list-pagination-button">2</button>
+            <button class="project-list-pagination-button">3</button>
+            <button class="project-list-pagination-button">&raquo;</button>
+            <select class="project-list-pagination-select">
+              <option value="10">10</option>
+              <option value="20">20</option>
+            </select>
+            <span class="project-list-pagination-page">/Page</span>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

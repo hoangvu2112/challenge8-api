@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Project</title>
+    <link rel="stylesheet" href="/styles/updateproject.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/detailproject.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1 class="sidebar__brand">Brand.</h1>
+      <nav class="sidebar__nav">
+        <div class="sidebar__nav-item">
+          <a href="/userlist.html" class="sidebar__nav-link">Users</a>
+        </div>
+        <div class="sidebar__nav-item sidebar__nav-item--active">
+          <p class="sidebar__nav-link">Projects</p>
+        </div>
+      </nav>
+    </div>
+
+    <div class="content">
+      <header class="content__header">
+        <div class="user-info">
+          <p class="user-info__name">Derek Alvarado</p>
+          <img
+            src="/imges/log-out-off-out-svgrepo-com 1.svg"
+            alt="Logout"
+            class="user-info__icon"
+          />
+        </div>
+      </header>
+
+      <main class="content__body">
+        <h1 class="content__title">
+          <a href="/projectlist.html" class="main-content-back">&larr; </a>
+          Update Project
+        </h1>
+
+        <form class="project-form">
+          <div class="project-form__field">
+            <label class="project-form__label">Name</label>
+            <input class="project-form__input" type="text" name="name" />
+          </div>
+
+          <div class="project-form__field">
+            <label class="project-form__label">Description</label>
+            <input class="project-form__input" type="text" name="description" />
+          </div>
+
+          <div class="project-form__dates">
+            <div class="project-form__date">
+              <label class="project-form__label">Start Date</label>
+              <input class="project-form__input" type="text" name="startDate" />
+            </div>
+            <div class="project-form__date">
+              <label class="project-form__label">End Date</label>
+              <input class="project-form__input" type="text" name="endDate" />
+            </div>
+          </div>
+
+          <div class="project-members">
+            <h2 class="project-members__title">Members</h2>
+            <table class="project-members__table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>User Name</th>
+                  <th>E-mail</th>
+                  <th>
+                    <img
+                      src="/imges/Button.svg"
+                      class="action-icon"
+                      alt="Action"
+                    />
+                  </th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <div class="pagination">
+              <button class="pagination__button">&lt;</button>
+              <button class="pagination__button pagination__button--active">
+                1
+              </button>
+              <button class="pagination__button">2</button>
+              <button class="pagination__button">3</button>
+              <button class="pagination__button">&gt;</button>
+              <select class="pagination__select">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+              <span>/Page</span>
+            </div>
+          </div>
+
+          <div class="project-form__buttons">
+            <button
+              class="project-form__button project-form__button--update"
+              type="button"
+            >
+              Update
+            </button>
+            <button
+              class="project-form__button project-form__button--cancel"
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </main>
+      <div class="user-selection-modal" id="userSelectionModal">
+        <div class="user-selection-modal__content">
+          <button class="user-selection-modal__close" onclick="closeModal()">
+            ✖
+          </button>
+          <input
+            type="text"
+            class="user-selection-modal__search"
+            placeholder="Search..."
+          />
+          <table class="user-selection-modal__table">
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th>E-Mail</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <button class="user-selection-modal__add-btn">ADD</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

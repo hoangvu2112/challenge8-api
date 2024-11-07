@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update User</title>
+    <link rel="stylesheet" href="/styles/updateuser.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/userlist.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1 class="sidebar-brand">Brand.</h1>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-item sidebar-nav-item-active">
+          <img
+            src="/imges/Vector.svg"
+            alt="Users Icon"
+            class="sidebar-nav-icon"
+          />
+          <p class="sidebar-nav-label">Users</p>
+        </div>
+        <div class="sidebar-nav-item">
+          <img
+            src="/imges/Vector2.svg"
+            alt="Projects Icon"
+            class="sidebar-nav-icon"
+          />
+          <a href="/projectlist.html" class="sidebar-nav-label">Projects</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="main-content">
+      <header class="main-content-header">
+        <div class="user-info">
+          <p class="user-info-name">Derek Alvarado</p>
+          <img
+            src="/imges/log-out-off-out-svgrepo-com 1.svg"
+            alt="Logout"
+            class="user-info-logout-icon"
+            onclick="logout()"
+          />
+        </div>
+      </header>
+
+      <div class="main-content-body">
+        <h1 class="main-content-title">
+          <a href="/userlist.html" class="main-content-back">&larr; </a> Update
+          User
+        </h1>
+        <form class="user-form">
+          <div class="user-form-group">
+            <label class="user-form-label" for="username"
+              >User Name<span>*</span></label
+            >
+            <input class="user-form-input" type="text" id="username" required />
+          </div>
+
+          <div class="user-form-group">
+            <label class="user-form-label" for="password"
+              >Password<span>*</span></label
+            >
+            <input
+              class="user-form-input"
+              type="password"
+              id="password"
+              readonly
+            />
+          </div>
+
+          <div class="user-form-group">
+            <label class="user-form-label" for="email"
+              >Email<span>*</span></label
+            >
+            <input class="user-form-input" type="email" id="email" required />
+          </div>
+
+          <div class="user-form-actions">
+            <button
+              class="user-form-button user-form-button-change-password"
+              type="button"
+              onclick="openChangePasswordPopup()"
+            >
+              Change Password
+            </button>
+            <button
+              class="user-form-button user-form-button-save"
+              type="button"
+              onclick="saveUser()"
+            >
+              Save
+            </button>
+            <button
+              class="user-form-button user-form-button-cancel"
+              type="button"
+              onclick="cancelUpdate()"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+
+        <!-- Popup thay đổi mật khẩu -->
+        <div id="changePasswordPopup" class="popup" style="display: none">
+          <div class="popup-header">
+            <span class="popup-title">Change Password</span>
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+          </div>
+
+          <form class="popup-form" id="changePasswordForm">
+            <div class="popup-form-group">
+              <label class="popup-form-label" for="popup-email">Email</label>
+              <input
+                class="popup-form-input"
+                type="email"
+                id="popup-email"
+                required
+                readonly
+              />
+            </div>
+
+            <div class="popup-form-group">
+              <label class="popup-form-label" for="popup-password"
+                >New Password</label
+              >
+              <input
+                class="popup-form-input"
+                type="password"
+                id="popup-password"
+                required
+              />
+            </div>
+
+            <div class="popup-form-actions">
+              <button
+                class="popup-form-button popup-form-button-apply"
+                type="button"
+                onclick="changePassword()"
+              >
+                Apply
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+}
+
+.user-list {
+  display: flex;
+  height: 100vh;
+}
+.user-list .user-list__sidebar {
+  width: 200px;
+  background-color: #2f3a4f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.user-list .user-list__sidebar .user-list__brand {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.user-list .user-list__sidebar .user-list__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-list .user-list__sidebar .user-list__nav .user-list__nav-item-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.user-list .user-list__sidebar .user-list__nav .user-list__nav-item-wrapper:hover {
+  background-color: #3f4c63;
+}
+.user-list .user-list__sidebar .user-list__nav .user-list__nav-item {
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  transition: background 0.3s;
+}
+.user-list .user-list__sidebar .user-list__nav .user-list__nav-item:hover {
+  background-color: #3f4c63;
+}
+.user-list .user-list__sidebar .user-list__nav .user-list__nav-icon {
+  width: 20px;
+  height: 20px;
+}
+.user-list .user-form__main-content {
+  flex: 1;
+  padding: 20px;
+}
+.user-list .user-form__main-content .user-form__top-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.user-list .user-form__main-content .user-form__user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.user-list .user-form__main-content .user-form__user-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+.user-list .user-form__main-content .user-list__header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.user-list .user-form__main-content .user-list__header .user-list__title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+.user-list .user-form__main-content .user-list__header .user-list__header-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.user-list .user-form__main-content .user-list__search {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.user-list .user-form__main-content .user-list__search .user-list__new-user {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  max-width: 141px;
+  width: 100%;
+}
+.user-list .user-form__main-content .user-list__search .user-list__new-user:hover {
+  background-color: #0056b3;
+}
+.user-list .user-form__main-content .user-list__search .user-list__search-input {
+  padding: 10px;
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+.user-list .user-form__main-content .user-list__search .user-list__search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.user-list .user-form__main-content .user-list__table {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.user-list .user-form__main-content .user-list__table .user-list__table-header {
+  display: flex;
+  background-color: #f5f5f5;
+  padding: 10px;
+  font-weight: bold;
+}
+.user-list .user-form__main-content .user-list__table .user-list__table-header .user-list__table-header-cell {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+.user-list .user-form__main-content .user-list__table .user-list__table-body {
+  display: flex;
+  flex-direction: column;
+}
+.user-list .user-form__main-content .user-list__table .user-list__table-body .user-list__table-row {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.user-list .user-form__main-content .user-list__table .user-list__table-body .user-list__table-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.user-list .user-form__main-content .user-list__table .user-list__table-body .user-list__table-row .user-list__table-cell {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+.user-list .user-form__main-content .user-list__table .user-list__table-body .user-list__table-row .user-list__table-actions {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.user-list .user-form__main-content .user-list__table .user-list__action-button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.user-list .user-form__main-content .user-list__pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.user-list .user-form__main-content .user-list__pagination .user-list__pagination-button {
+  padding: 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f4f4f9;
+}
+.user-list .user-form__main-content .user-list__pagination .user-list__pagination-button:hover {
+  background-color: #ddd;
+}
+.user-list .user-form__main-content .user-list__pagination .user-list__pagination-select {
+  padding: 10px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 137px;
+  width: 100%;
+}
+.user-list .user-form__main-content .user-list__pagination .user-list__pagination-page {
+  margin-left: 10px;
+}/*# sourceMappingURL=userlist.css.map */

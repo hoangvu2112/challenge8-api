@@ -1,0 +1,193 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background-color: #2f3a4f;
+  color: #fff;
+  padding: 20px;
+
+  &__brand {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__nav {
+    &-item {
+      padding: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &--active {
+        background-color: #3f4c63;
+      }
+
+      &:hover {
+        background-color: #3f4c63;
+      }
+    }
+
+    &-link {
+      font-size: 16px;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 20px;
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+      &__name {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      &__icon {
+        width: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    .content__title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      .main-content-back {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* Project Form */
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &__field,
+  &__date {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  &__input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+  }
+
+  &__dates {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &--cancel {
+      background-color: #f4f4f9;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+/* Project Members Table */
+.project-members {
+  margin-top: 20px;
+
+  &__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 5px;
+
+  &__button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #fff;
+
+    &--active {
+      background-color: #2f3a4f;
+      color: #fff;
+    }
+  }
+
+  &__select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+}

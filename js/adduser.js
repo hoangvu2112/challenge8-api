@@ -1,3 +1,6 @@
+function redirectToUserList() {
+  window.location.href = "/userlist.html";
+}
 document.addEventListener("DOMContentLoaded", function () {
   const signupForm = document.getElementById("signup-form");
 
@@ -9,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
   signupForm.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const name = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
 
     if (!name || !email || !password) {
       alert("Vui lòng điền đầy đủ thông tin!");
@@ -37,23 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const result = await response.json();
-      console.log("Response status:", response.status);
-      console.log("Response data:", result);
 
-      if (response.status === 201) {
-        // Lưu toàn bộ thông tin tài khoản vào Local Storage
-        localStorage.setItem(
-          "user",
-          JSON.stringify({
-            id: result.id,
-            username: result.username,
-            email: result.email,
-          })
-        );
-        alert("Đăng ký thành công! Thông tin tài khoản đã được lưu.");
-
-        // Chuyển hướng đến trang đăng nhập hoặc trang khác
-        window.location.href = "/signin.html";
+      if (response.ok) {
+        const userId = result.id;
+        localStorage.setItem("userId", userId);
+        alert("Đăng ký thành công! ID của bạn đã được lưu.");
       } else {
         alert(result.message || "Có lỗi xảy ra!");
       }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users List</title>
+    <link rel="stylesheet" href="/styles/userlist.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/userlist.js"></script>
+  </head>
+  <body>
+    <div class="user-list">
+      <div class="user-list__sidebar">
+        <h1 class="user-list__brand">Brand.</h1>
+        <div class="user-list__nav">
+          <div class="user-list__nav-item-wrapper">
+            <img
+              src="/imges/Vector.svg"
+              alt="Users Icon"
+              class="user-list__nav-icon"
+            />
+            <p class="user-list__nav-item user-list__nav-item--active">Users</p>
+          </div>
+          <div class="user-list__nav-item-wrapper">
+            <img
+              src="/imges/Vector2.svg"
+              alt="Projects Icon"
+              class="user-list__nav-icon"
+            />
+            <p class="user-list__nav-item">Projects</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="user-form__main-content">
+        <div class="user-form__top-header">
+          <div class="user-form__user-info">
+            <p class="user-form__user-name">Derek Alvarado</p>
+            <span class="user-form__user-icon">
+              <img
+                src="/imges/log-out-off-out-svgrepo-com 1.svg"
+                alt="Log Out"
+                onclick="logout()"
+              />
+            </span>
+          </div>
+        </div>
+
+        <div class="user-list__header">
+          <h1 class="user-list__title">Users' List</h1>
+        </div>
+
+        <div class="user-list__search">
+          <button class="user-list__new-user" onclick="redirectToAddUser()">
+            + New User
+          </button>
+          <input
+            type="text"
+            class="user-list__search-input"
+            placeholder="Search..."
+          />
+        </div>
+
+        <div class="user-list__table">
+          <div class="user-list__table-header">
+            <p class="user-list__table-header-cell">#</p>
+            <p class="user-list__table-header-cell">Users Name</p>
+            <p class="user-list__table-header-cell">E-mail</p>
+            <p class="user-list__table-header-cell">Actions</p>
+          </div>
+
+          <div class="user-list__table-body">
+            <div class="user-list__table-row">
+              <div class="user-list__table-cell user-list__table-actions">
+                <button
+                  class="user-list__action-button"
+                  onclick="viewDetailUser('USER_ID')"
+                >
+                  ↗
+                </button>
+                <button class="user-list__action-button">✎</button>
+                <button class="user-list__action-button">🗑</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="user-list__pagination">
+            <button class="user-list__pagination-button">&laquo;</button>
+            <button class="user-list__pagination-button">1</button>
+            <button class="user-list__pagination-button">2</button>
+            <button class="user-list__pagination-button">3</button>
+            <button class="user-list__pagination-button">&raquo;</button>
+            <select class="user-list__pagination-select">
+              <option value="10">10</option>
+              <option value="20">20</option>
+            </select>
+            <span class="user-list__pagination-page">/Page</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

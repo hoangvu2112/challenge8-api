@@ -1,0 +1,182 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 20%;
+  background-color: #2f3a4f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar__brand {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar__nav-item--active {
+  background-color: #3f4c63;
+}
+
+.sidebar__nav-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar__nav-label {
+  font-size: 16px;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.main-content__header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  padding: 8px 27.74px;
+  border-radius: 8px;
+  border: 1px solid var(--Neutral-200, #e9ecef);
+}
+
+.user-info__name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.user-info__logout-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.main-content__body {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content__title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.main-content-back {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Project Form Styles */
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-form__label {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.project-form__label span {
+  color: red;
+}
+
+.project-form__input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.project-form__date-group {
+  display: flex;
+  gap: 20px;
+}
+
+.project-form__date-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-form__actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.project-form__button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+.project-form__button--create {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.project-form__button--cancel {
+  background-color: #f4f4f9;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.project-form__button:hover {
+  opacity: 0.8;
+}
