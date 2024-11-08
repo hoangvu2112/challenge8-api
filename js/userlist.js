@@ -98,15 +98,12 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="user-list__table-cell">${user.username}</p>
             <p class="user-list__table-cell">${user.email}</p>
             <div class="user-list__table-cell user-list__table-actions">
-              <button class="user-list__action-button detail-button" data-user-id="${
-                user._id
-              }">↗</button>
-              <button class="user-list__action-button edit-button" data-user-id="${
-                user._id
-              }">✎</button>
-              <button class="user-list__action-button delete-button" data-user-id="${
-                user._id
-              }">🗑</button>
+              <button class="user-list__action-button detail-button" data-user-id="${user._id
+        }">↗</button>
+              <button class="user-list__action-button edit-button" data-user-id="${user._id
+        }">✎</button>
+              <button class="user-list__action-button delete-button" data-user-id="${user._id
+        }">🗑</button>
             </div>
           `;
 
@@ -249,8 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           const errorData = await response.json();
           alert(
-            `Xóa người dùng thất bại: ${
-              errorData.message || "Lỗi không xác định"
+            `Xóa người dùng thất bại: ${errorData.message || "Lỗi không xác định"
             }`
           );
         }
