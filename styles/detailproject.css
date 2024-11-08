@@ -28,8 +28,15 @@ body {
   cursor: pointer;
   transition: background 0.3s;
 }
+.sidebar__nav-item .sidebar__nav-label {
+  color: #fff;
+  text-decoration: none;
+}
 .sidebar__nav-item--active {
+  display: flex;
   background-color: #3f4c63;
+  gap: 3px;
+  border-radius: 10px;
 }
 .sidebar__nav-item:hover {
   background-color: #3f4c63;
