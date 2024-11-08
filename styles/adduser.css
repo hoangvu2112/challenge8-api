@@ -53,6 +53,7 @@ body {
   cursor: pointer;
   font-family: "Roboto", sans-serif;
   transition: background 0.3s;
+  text-decoration: none;
 }
 .user-form .user-form__sidebar .user-form__nav .user-form__nav-icon {
   width: 20px; /* Kích thước icon */

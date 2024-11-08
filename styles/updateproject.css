@@ -25,6 +25,8 @@ body {
 .sidebar__nav-item {
   padding: 10px;
   margin-bottom: 8px;
+  display: flex;
+  gap: 3px;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -33,6 +35,11 @@ body {
 }
 .sidebar__nav-item:hover {
   background-color: #3f4c63;
+}
+.sidebar__nav-item .sidebar__nav-label {
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
 }
 .sidebar__nav-link {
   font-size: 16px;

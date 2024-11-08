@@ -29,9 +29,16 @@ body {
       margin-bottom: 8px;
       cursor: pointer;
       transition: background 0.3s;
+      .sidebar__nav-label {
+        color: #fff;
+        text-decoration: none;
+      }
 
       &--active {
+        display: flex;
         background-color: #3f4c63;
+        gap: 3px;
+        border-radius: 10px;
       }
 
       &:hover {

@@ -221,7 +221,6 @@ $(document).ready(async function () {
         fetchMemberProject();
       })
       .catch((error) => {
-        console.error("Error adding user to project:", error);
         alert("Không thể thêm người dùng vào dự án");
       });
   }
@@ -342,4 +341,109 @@ function displayProjectDetails(project) {
       window.location.href = "/signin.html";
     }
   );
+}
+
+let currentPage = 1;
+let usersPerPage = 10; // Giá trị mặc định lấy từ <select>
+let totalUsers = 0;
+
+// Hàm cập nhật thông tin phân trang và hiển thị các nút trang
+function updatePagination() {
+  const totalPages = Math.ceil(totalUsers / usersPerPage);
+  const paginationPages = $(".pagination__pages");
+  paginationPages.empty();
+
+  // Hiển thị các nút trang số
+  for (let i = 1; i <= totalPages; i++) {
+    const pageButton = $(`<button class="pagination__page">${i}</button>`);
+    if (i === currentPage) {
+      pageButton.addClass("active");
+    }
+    pageButton.on("click", function () {
+      currentPage = i;
+      fetchUserData();
+    });
+    paginationPages.append(pageButton);
+  }
+
+  // Cập nhật trạng thái của nút Previous và Next
+  $(".pagination__prev").prop("disabled", currentPage === 1);
+  $(".pagination__next").prop("disabled", currentPage === totalPages);
+}
+
+// Sự kiện cho nút Previous
+$(".pagination__prev").on("click", function () {
+  if (currentPage > 1) {
+    currentPage--;
+    fetchUserData();
+  }
+});
+
+// Sự kiện cho nút Next
+$(".pagination__next").on("click", function () {
+  const totalPages = Math.ceil(totalUsers / usersPerPage);
+  if (currentPage < totalPages) {
+    currentPage++;
+    fetchUserData();
+  }
+});
+
+// Sự kiện thay đổi số lượng người dùng hiển thị trên mỗi trang
+$(".pagination__page-size").on("change", function () {
+  usersPerPage = parseInt($(this).val());
+  currentPage = 1; // Quay về trang đầu khi thay đổi số lượng hiển thị
+  fetchUserData();
+});
+
+// Cập nhật hàm fetchUserData để hỗ trợ phân trang
+async function fetchUserData() {
+  try {
+    const response = await fetch(
+      `https://crudnodejs-production.up.railway.app/api/users?page=${currentPage}&limit=${usersPerPage}`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`, // Sử dụng token của bạn
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Không thể lấy dữ liệu người dùng");
+    }
+
+    const data = await response.json();
+    totalUsers = data.total; // Tổng số người dùng, lấy từ phản hồi API
+    populateModalTable(data.users); // Điền dữ liệu vào bảng nếu lấy dữ liệu thành công
+    updatePagination(); // Cập nhật thông tin phân trang
+  } catch (error) {
+    console.error("Error fetching user data:", error);
+    alert("Không thể lấy dữ liệu người dùng");
+  }
+}
+
+// Cập nhật hàm populateModalTable để hiển thị đúng người dùng
+function populateModalTable(users) {
+  const tbody = $(".user-selection-modal__table");
+  tbody.empty(); // Xóa các dòng cũ
+
+  if (!Array.isArray(users)) {
+    console.error("Dữ liệu không phải là mảng:", users);
+    return;
+  }
+
+  users.forEach((user) => {
+    const row = $(`<tr data-user-id="${user._id}">
+        <td>${user.username}</td>
+        <td>${user.email}</td>
+      </tr>`);
+
+    row.on("click", function () {
+      $("tr").removeClass("selected");
+      $(this).addClass("selected");
+      selectedUserId = $(this).data("user-id");
+    });
+
+    tbody.append(row);
+  });
 }

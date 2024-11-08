@@ -164,6 +164,7 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+  justify-content: center;
 }
 .project-list .project-list-main-content .project-list-content .project-list-table .project-list-table-body .project-list-table-row .project-list-status .project-list-status-indicator {
   width: 10px;

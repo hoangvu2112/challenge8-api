@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const userId = result.id;
         localStorage.setItem("userId", userId);
         alert("Đăng ký thành công! ID của bạn đã được lưu.");
+        redirectToUserList();
       } else {
         alert(result.message || "Có lỗi xảy ra!");
       }

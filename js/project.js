@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const projectResult = await createProjectResponse.json();
-      const projectId = projectResult.id;
+      const projectId = projectResult._id;
       console.log("ID của dự án vừa được tạo:", projectId);
 
       localStorage.setItem("projectId", projectId);
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   let currentPage = 1;
-  let itemsPerPage = 10;
+  let itemsPerPage = 6;
 
   async function fetchProjects() {
     try {

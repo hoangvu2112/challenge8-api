@@ -59,6 +59,8 @@ body {
 
 .sidebar-nav-label {
   font-size: 16px;
+  text-decoration: none;
+  color: #fff;
 }
 
 /* Main Content Styles */

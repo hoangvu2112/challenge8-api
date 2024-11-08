@@ -13,10 +13,20 @@
       <h1 class="sidebar__brand">Brand.</h1>
       <nav class="sidebar__nav">
         <div class="sidebar__nav-item">
-          <a href="/userlist.html" class="sidebar__nav-link">Users</a>
+          <img
+            src="/imges/Vector.svg"
+            alt="Users Icon"
+            class="sidebar__nav-icon"
+          />
+          <a href="/userlist.html" class="sidebar__nav-label">Users</a>
         </div>
         <div class="sidebar__nav-item sidebar__nav-item--active">
-          <p class="sidebar__nav-link">Projects</p>
+          <img
+            src="/imges/Vector2.svg"
+            alt="Projects Icon"
+            class="sidebar__nav-icon"
+          />
+          <p class="sidebar__nav-label">Projects</p>
         </div>
       </nav>
     </div>
@@ -80,14 +90,15 @@
               </thead>
               <tbody></tbody>
             </table>
-            <div class="pagination">
-              <button class="pagination__button">&lt;</button>
+            <!-- Thêm phần phân trang chỉ cho bảng thành viên -->
+            <div class="members-pagination">
+              <button class="pagination__button pagination-prev">&lt;</button>
               <button class="pagination__button pagination__button--active">
                 1
               </button>
-              <button class="pagination__button">2</button>
-              <button class="pagination__button">3</button>
-              <button class="pagination__button">&gt;</button>
+              <button class="pagination__button pagination-page">2</button>
+              <button class="pagination__button pagination-page">3</button>
+              <button class="pagination__button pagination-next">&gt;</button>
               <select class="pagination__select">
                 <option value="10">10</option>
                 <option value="20">20</option>

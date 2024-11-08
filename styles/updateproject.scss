@@ -27,6 +27,8 @@ body {
     &-item {
       padding: 10px;
       margin-bottom: 8px;
+      display: flex;
+      gap: 3px;
 
       cursor: pointer;
       transition: background 0.3s;
@@ -37,6 +39,11 @@ body {
 
       &:hover {
         background-color: #3f4c63;
+      }
+      .sidebar__nav-label {
+        font-size: 16px;
+        text-decoration: none;
+        color: #fff;
       }
     }
 
