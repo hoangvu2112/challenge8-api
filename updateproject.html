@@ -79,7 +79,7 @@
                   <th>#</th>
                   <th>User Name</th>
                   <th>E-mail</th>
-                  <th>
+                  <th onclick="openModal()">
                     <img
                       src="/imges/Button.svg"
                       class="action-icon"
@@ -92,19 +92,35 @@
             </table>
             <!-- Thêm phần phân trang chỉ cho bảng thành viên -->
             <div class="members-pagination">
-              <button class="pagination__button pagination-prev">&lt;</button>
-              <button class="pagination__button pagination__button--active">
-                1
+              <button
+                class="pagination__button pagination-prev"
+                aria-label="Previous Page"
+              >
+                &lt;
               </button>
-              <button class="pagination__button pagination-page">2</button>
-              <button class="pagination__button pagination-page">3</button>
-              <button class="pagination__button pagination-next">&gt;</button>
-              <select class="pagination__select">
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="30">30</option>
-              </select>
-              <span>/Page</span>
+
+              <div class="pagination__pages">
+                <button class="pagination__button pagination__button--active">
+                  1
+                </button>
+                <button class="pagination__button pagination-page">2</button>
+                <button class="pagination__button pagination-page">3</button>
+              </div>
+
+              <button
+                class="pagination__button pagination-next"
+                aria-label="Next Page"
+              >
+                &gt;
+              </button>
+              <label for="pagination-select" class="pagination__label">
+                <select class="pagination__select" id="pagination-select">
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                </select>
+                <span>/Page</span>
+              </label>
             </div>
           </div>
 
@@ -134,6 +150,7 @@
             class="user-selection-modal__search"
             placeholder="Search..."
           />
+
           <table class="user-selection-modal__table">
             <thead>
               <tr>
